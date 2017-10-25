@@ -9,7 +9,7 @@ module.exports = {
 		filename:'bundle.js'
 	},
 	devServer:{
-		contentBase:'./public',
+		contentBase:'./build',
 		historyApiFallback:true,
 		inline:true,
 		hot:true
@@ -22,13 +22,15 @@ module.exports = {
 				exclude:/node_modules/
 			},
 			{
-				test:/(\.less|\.css)$/,
+				test:/(\.css)$/,
 				use:[{loader:'style-loader'},
-				{loader:'css-loader',options:{importLoaders:2}},
-				{loader:'postcss-loader'},
-				{loader:'less-loader'}]	
-			}
-		]
+				{loader:'css-loader'},
+				{loader:'postcss-loader'}]
+			},
+			{
+				test:/\.(svg|ttf|eot|woff|woff2)$/,
+				use:'file-loader'
+			}]
 	},
 	plugins:[
 		new HtmlWebpackPlugin({
