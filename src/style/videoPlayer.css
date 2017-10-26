@@ -22,15 +22,8 @@
 	background-color: #07141e;
 	background-color: rgba(7,20,30,0.7);
 	border: 0.08em solid #3b4249;
-	-webkit-border-radius: 0.8em;
-	-moz-border-radius: 0.8em;
 	border-radius: 0.8em;
-	-webkit-box-shadow: 0 0 1em rgba(255,255,255,0.25);
-	-moz-box-shadow: 0 0 1em rgba(255,255,255,0.25);
 	box-shadow: 0 0 1em rgba(255,255,255,0.25);
-	-webkit-transition: all 0.4s;
-	-moz-transition: all 0.4s;
-	-o-transition: all 0.4s;
 	transition: all 0.4s;
 }
 .vjs-big-play-button:hover{
@@ -40,20 +33,15 @@
 	background-color: #505050;
 	background-color: rgba(50, 50, 50, 0.75);
 	/* box-shadow */
-	-webkit-box-shadow: 0 0 3em #ffffff;
-	-moz-box-shadow: 0 0 3em #ffffff;
 	box-shadow: 0 0 3em #ffffff;
 	/* transition */
-	-webkit-transition: all 0s;
-	-moz-transition: all 0s;
-	-o-transition: all 0s;
 	transition: all 0s;
 }
 .vjs-big-play-button span{
 	color:#cccccc;
 	font-size: 1.2em;
 }
-.vjs-big-play-button span i:before{
+.vjs-big-play-button span i::before{
 	text-align: center;
 	vertical-align: middle;
 }
@@ -114,7 +102,7 @@
 	color:#cccccc;
 	font-size: 1.5em;
 }
-.vjs-fullscreen-control i:before{
+.vjs-fullscreen-control i::before{
 	text-align: center;
 	vertical-align: middle;
 }
@@ -151,10 +139,6 @@
 .vjs-volume-handle i{
 	text-shadow: 0 0 1em #fff;
 	display: block;
-	-webkit-transform: rotate(-45deg);
-	-moz-transform: rotate(-45deg);
-	-ms-transform: rotate(-45deg);
-	-o-transform: rotate(-45deg);
 	transform: rotate(-45deg);
 }
 .vjs-play-control{
@@ -163,7 +147,7 @@
 	cursor: pointer;
 	text-align: center;
 }
-.vjs-play-control i:before{
+.vjs-play-control i::before{
 	text-align: center;
 	vertical-align: middle;
 }
@@ -206,10 +190,6 @@
 .vjs-slider-handle i{
 	text-shadow: 0 0 1em #fff;
 	display: table;
-	-webkit-transform: rotate(-45deg);
-	-moz-transform: rotate(-45deg);
-	-ms-transform: rotate(-45deg);
-	-o-transform: rotate(-45deg);
 	transform: rotate(-45deg);
 }
 .vjs-fullscreen-control{

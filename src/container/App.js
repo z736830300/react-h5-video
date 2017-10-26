@@ -54,31 +54,32 @@ class App extends Component{
 		}
 		return(
 			<div className="container">
-				{/* <h3>Video Player</h3> */}
-				<div className="game-assets">
-					<div className="video-assets">
-					<VideoPlayer video={this.state.videoList[this.state.videoIndex]}/>
-						<div className="asset-select-container">
-							<div className="slider-top" onClick={()=> this.changePage(Math.max(this.state.currentVideoPage - 1,1))}>
-								<i className="fa fa-angle-up"/>
-							</div>
-							<div className="asset-list-block">
-								<div className="asset-list" style={{top: '-' + top}}>
-									{
-										this.state.videoList.map((item, index) => {
-											return(
-												<div className={index + '' === this.state.videoIndex? 'asset-item active' :'asset-item'} key={index} data-index={index}  onClick={this.handleClick}>
-													<img src={item.thumbnail_url + '?imageView2/1/w/110/h/67'}/>
-												</div>
-											)
-										})
-									}
+				<h3><i className="fa fa-video-camera" />React Video Player</h3>
+				<div style={{background:'#959595'}}>
+					<div className="game-assets">
+						<div id="video-assets">
+						<VideoPlayer video={this.state.videoList[this.state.videoIndex]}/>
+							<div className="asset-select-container">
+								<div className="slider-top" onClick={()=> this.changePage(Math.max(this.state.currentVideoPage - 1,1))}>
+									<i className="fa fa-angle-up"/>
+								</div>
+								<div className="asset-list-block">
+									<div className="asset-list" style={{top: '-' + top}}>
+										{
+											this.state.videoList.map((item, index) => {
+												return(
+													<div className={index + '' === this.state.videoIndex? 'asset-item active' :'asset-item'} key={index} data-index={index}  onClick={this.handleClick}>
+														<img src={item.thumbnail_url + '?imageView2/1/w/110/h/67'}/>
+													</div>
+												)
+											})
+										}
+									</div>
+								</div>
+								<div className="slider-bottom" onClick={()=> this.changePage(Math.min(this.state.currentVideoPage + 1, Math.ceil(this.state.videoList.length / 4)))}>
+									<i className="fa fa-angle-down"/>
 								</div>
 							</div>
-							<div className="slider-bottom" onClick={()=> this.changePage(Math.min(this.state.currentVideoPage + 1, Math.ceil(this.state.videoList.length / 4)))}>
-								<i className="fa fa-angle-down"/>
-							</div>
-							<div className="asset-list-block"></div>
 						</div>
 					</div>
 				</div>

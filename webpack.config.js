@@ -28,6 +28,13 @@ module.exports = {
 				{loader:'postcss-loader'}]
 			},
 			{
+				test:/(\.less)$/,
+				use:[{loader:'style-loader'},
+				{loader:'css-loader'},
+				{loader:'postcss-loader'},
+				{loader:'less-loaader'}]
+			},
+			{
 				test:/\.(svg|ttf|eot|woff|woff2)$/,
 				use:'file-loader'
 			}]
